@@ -1,0 +1,21 @@
+#spring
+#application
+#name=jwt6
+
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/jwt_security
+    username: postgres
+    password: bestuser
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop # it means that you have every time we need to create and then destroy the schema
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true # i want the queries to be formatted
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
